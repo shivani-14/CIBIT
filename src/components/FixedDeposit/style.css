@@ -1,0 +1,126 @@
+.fd {
+    margin: 30px 100px;
+    height: 500px;
+}
+
+.header {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #f1f1f1;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    padding: 10px 0px;
+}
+
+.header-active {
+    background: cornflowerblue;
+    padding: 8px 20px;
+}
+
+.component {
+    border: 5px solid #f1f1f1;
+    border-radius: 10px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.component-item {
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+    margin-left: 50px;
+    color: gray;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-items: center;
+    margin-top: 5px;
+    margin-left: 120px;
+}
+
+.form-input {
+    height: 40px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: solid 2px #f1f1f1;
+    text-align-last: center;
+    color: #1f1f1f;
+    box-decoration-break: unset;
+}
+
+.form-input__child {
+    height: 100%;
+    border: none;
+    text-align: right;
+    width: 50%;
+}
+
+.button {
+    padding: 8px 20px;
+    border-radius: 4px;
+    background: #4ad9e4;
+    text-decoration: none;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 55%;
+    margin: 12px 50px;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: lightslategrey;
+    transition: 250ms;
+    border: 1px solid darkgray;
+}
+
+.form-input:hover {
+    border: solid 2px grey;
+}
+
+.form-input__option:hover {
+    background-color: #f1f1f1;
+}
+
+.form-input__option {
+    width: max-content;
+    margin-bottom: 1px;
+    border: 1px solid #1f1f1f;
+    left: 25%;
+    top: 5%;
+}
+
+.fdsuccess {
+    text-align: justify;
+    padding: 20px;
+    background: aquamarine;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:960px) {
+    .component {
+        display: block;
+        height: 100%;
+    }
+    .form {
+        margin-left: 120px;
+    }
+    .component-item {
+        margin-left: 0;
+        ;
+    }
+    .fd {
+        height: 650px;
+        height: 100%
+    }
+}

@@ -1,0 +1,127 @@
+.transfer {
+    width: 70%;
+    align-content: center;
+    margin: auto;
+    height: auto;
+    border: 1px solid #f1f1f1;
+}
+
+.transfer-header {
+    margin-top: 5px;
+    height: 70px;
+    background: #f1f1f1;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.transfer-header-active {
+    background: cornflowerblue;
+    padding: 8px 20px;
+}
+
+.transfer-content {
+    padding-top: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.ft-form {
+    width: 50%;
+    margin-top: 25px;
+}
+
+.ft-form-input {
+    height: 40px;
+    width: 200px;
+    text-align-last: center;
+    text-align: center;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid gray;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.rupee {
+    right: 2%;
+}
+
+.ft-form-input:hover {
+    border: 1px solid #1f1f1f;
+}
+
+.ft-form-element {
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ft-form-element textarea {
+    width: 500px;
+    height: 80px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid gray;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+.ft-form-element textarea:hover {
+    border: 1px solid #1f1f1f;
+}
+
+.transfer-footer {
+    display: flex;
+    justify-content: center;
+    margin: 0px 10px;
+}
+
+.ft-button {
+    padding: 8px 20px;
+    border-radius: 4px;
+    background: #4ad9e4;
+    text-decoration: none;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ft-button:hover {
+    background-color: #fff;
+    color: lightslategrey;
+    transition: 250ms;
+    border: 1px solid darkgray;
+}
+
+.confirm {
+    width: 100%;
+    margin: auto;
+}
+
+.confirm-content {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-content table {
+    text-align: justify;
+    width: 80%;
+    padding: 20px;
+    background: aquamarine;
+}
+
+.confirm-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}

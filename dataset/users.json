@@ -1,0 +1,94 @@
+{
+  "monthlyExpenseLimit": [
+    {
+      "accid": "ac123",
+      "left": 1000,
+      "spent": 0
+    },
+    {
+      "accid": "ac124",
+      "left": 1000,
+      "spent": 0
+    },
+    {
+      "accid": "ac126",
+      "left": 1000,
+      "spent": 0
+    },
+    {
+      "accid": "ac126",
+      "left": 1000,
+      "spent": 0
+    }
+  ],
+  "credit": [
+    {
+      "accid": "ac123",
+      "balance": 1000
+    },
+    {
+      "accid": "ac124",
+      "balance": 1000
+    },
+    {
+      "accid": "ac126",
+      "balance": 1000
+    },
+    {
+      "accid": "ac126",
+      "balance": 1000
+    }
+  ],
+  "savings": [
+    {
+      "accid": "ac123",
+      "balance": 100
+    },
+    {
+      "accid": "ac124",
+      "balance": 1000
+    },
+    {
+      "accid": "ac126",
+      "balance": 1000
+    },
+    {
+      "accid": "ac126",
+      "balance": 1000
+    }
+  ],
+  "auth": [
+    {
+      "username": "ac123",
+      "password": "123"
+    },
+    {
+      "username": "ac124",
+      "password": "124"
+    },
+    {
+      "username": "ac125",
+      "password": "125"
+    },
+    {
+      "username": "ac126",
+      "password": "126 "
+    }
+  ],
+  "transaction": [
+    {
+      "balance": 200,
+      "id": "mani"
+    },
+    {
+      "accid": "ac123",
+      "balance": "100",
+      "id": "ifRTZZN"
+    },
+    {
+      "accid": "ac123",
+      "balance": "100",
+      "id": "Y4AUBB1"
+    }
+  ]
+}

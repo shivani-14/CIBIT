@@ -2,16 +2,16 @@ import { Doughnut } from 'react-chartjs-2';
 import React,{useEffect,useState} from 'react';
 
  const FDchart=({details})=>{
-     
+     console.log(details,"in fd chart");
       let {principal,roi,tp,timeperiod,...rest}=details;
-        principal=parseInt(principal)
-        roi=parseFloat(roi)/100
+      principal = parseInt(principal);
+      roi =  parseInt(roi);
         tp=parseInt(tp);
         if(timeperiod==="Months"){
           tp=tp/12;
         }
-          const interest = (principal*Math.pow((1+roi/4),4*tp))-principal;
-          console.log(principal,roi,tp,timeperiod,interest)
+          const interest = (principal*Math.pow((1+roi/400),4*tp))-principal;
+          console.log(principal,tp,timeperiod,interest)
            const  chartData={ labels:['Total Investment' , 'Total Interest'],
              datasets:[
                  {

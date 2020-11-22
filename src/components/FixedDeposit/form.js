@@ -3,16 +3,19 @@
 import React from 'react';
 import './style.css';
 function Form({details,handleInput,handleDeposit}) {
-    const {principal,roi,timeperiod,tp,debitedFrom,accountdetails}=details
-    const check=principal&&roi&&timeperiod&&tp&&debitedFrom;
+    const {principal,timeperiod,tp,debitedFrom,accountdetails}=details
+    const check=principal&&timeperiod&&tp&&debitedFrom;
+    let rate= "2";
+    console.log(details);
     return (
+        
         <div className="form">
             
             <input className="form-input"  value={principal} type="text" name="principal" placeholder="principal" onInput={(e) => handleInput(e)}></input>
-            <input className="form-input" value={roi} type="text" name="roi" placeholder="rate Of Interest" onInput={(e) => handleInput(e)}></input>
+            {/*<!--<input className="form-input" value={rate} type="text" name="roi" placeholder="rate Of Interest" onInput={(e) => handleInput(e)}></input>-->*/ }
             
             <div className="form-input">
-                <input type="text" value={tp} placeholder="timeperiod" className="form-input__child" name="tp"onInput={(e) => handleInput(e)} ></input>
+                <input type="text" value={tp} placeholder="timeperiod" className="form-input__child" name="tp" onInput={(e) => handleInput(e)} ></input>
                 <select  className="form-input__child" name="timeperiod" onChange = {(e) => handleInput(e)}>
                     <option  className="form-input__option" value=""></option>
 

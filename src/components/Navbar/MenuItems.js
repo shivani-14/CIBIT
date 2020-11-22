@@ -14,6 +14,10 @@ export const MenuItems = [
         url:'/fd/',
         cName:'nav-links'
     },{
+        title:"MyTransactions",
+        url: '/mytransactions/',
+        cName:'nav-links'
+    },{
         title:"logout",
         url: '/logout/',
         cName:'nav-links-mobile'

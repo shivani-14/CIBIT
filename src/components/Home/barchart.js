@@ -3,6 +3,7 @@ import React from 'react'
 import { Bar as BarChart } from 'react-chartjs-2'
 
 export const Chart = (props) => {
+  const result  = props.accountdetails.map(account => ([account.account_type,account.account_balance]));
     
   
 
@@ -10,10 +11,11 @@ export const Chart = (props) => {
   const balancetype=props.accountdetails.map(account => account.account_type)
   console.log(props.accountdetails);
    const  datasets =  { 
-       labels: balancetype,
+       labels: result,
 
        datasets:[
     {
+      label:'balance (rs)',
       data: balanceinfo,
       backgroundColor: '#74B649',
       borderColor: '#36404D',

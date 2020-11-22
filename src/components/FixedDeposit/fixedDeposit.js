@@ -52,7 +52,6 @@ class Fd extends React.Component{
         
         this.setState({
             principal:'',
-            roi:'',
             tp:'',
             timeperiod:'',
             debitedFrom:'',
@@ -155,11 +154,35 @@ class Fd extends React.Component{
 
     
     handleInput(e){
+
        if(!isNaN(e.target.value)||e.target.name==='timeperiod'||e.target.name==='debitedFrom'){
-            this.setState({
-                [e.target.name]:e.target.value,  
-                
-            }) 
+           if(e.target.name === 'principal'){
+               let roi = 0;
+               let principal = e.target.value;
+      if (principal < 500000  && principal >= 400000 ){
+        roi = 7;
+    }
+    else if (principal >= 300000 && principal < 400000){
+        roi = 5;
+    }
+    else if (principal < 300000){
+        roi = 3;
+    }
+    else {
+        roi = 10;
+    }
+    
+    this.setState({principal,roi})
+
+
+    
+           }
+            else{
+                this.setState({
+                    [e.target.name]:e.target.value, 
+                    
+                }) 
+            }
         }
     }
     render(){
@@ -168,6 +191,7 @@ class Fd extends React.Component{
                 <div className="fd">
                 
                     <div className="header">
+                    
                        {this.state.stage===1?<div className="header-active">Deposit</div>: <div>Deposit</div>}
                        {this.state.stage===2?<div className="header-active">Success</div>:<div>Success</div>}
                     </div>
@@ -181,7 +205,7 @@ class Fd extends React.Component{
                                     <Form details={this.state} handleInput={this.handleInput} handleDeposit={this.handleDeposit}/>
                                 </div>
                                     {
-                                        this.state.tp!==''&&this.state.principal!==''&&this.state.roi!==''&&this.state.timeperiod!==""?
+                                        this.state.tp!==''&&this.state.principal!==''&&this.state.timeperiod!==""?
                                             <div  className="component-item">
                                         
                                                 <FDchart details={this.state} />

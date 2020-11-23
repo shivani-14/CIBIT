@@ -14,6 +14,7 @@ import com.training.org.repository.TransactionRepository;
 @Service
 public class TransactionServiceImpl implements TransactionService {
 
+	
 	@Autowired
 	private TransactionRepository repo; 
 	
@@ -33,6 +34,12 @@ public class TransactionServiceImpl implements TransactionService {
 	@Override
 	public List<Transaction> getTransaction(Date start,Date current,int account_id) {
 		return repo.getTransaction(start,current,account_id);
+	}
+
+	@Transactional
+	@Override
+	public List<Date> getAll() {
+		return repo.getAll();
 	}
 
 } 

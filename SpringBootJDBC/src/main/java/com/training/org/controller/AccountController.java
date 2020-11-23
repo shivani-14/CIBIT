@@ -148,5 +148,10 @@ public class AccountController {
 	public Transaction test(@RequestBody Transaction transaction) {
 		return transaction;
 	}
+	
+	@GetMapping("/test2")
+	public List<Date> getAll(){
+		return transactionService.getAll();
+	}
+	
 }
-

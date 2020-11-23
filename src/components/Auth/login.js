@@ -1,6 +1,7 @@
  import React from 'react'
  import './style.css';
  import axios from 'axios';
+ import two from './images/two.jpg';
  class Login extends React.Component {
     constructor(props){
         super(props);
@@ -43,7 +44,7 @@
 
     render(){
         return (
-            <div>
+            <div className="login">
                 <form className="box" onSubmit={this.handleSubmit}>
                     {this.props.error&&<p>Please enter valid details</p>}
                     <h1>Login</h1>

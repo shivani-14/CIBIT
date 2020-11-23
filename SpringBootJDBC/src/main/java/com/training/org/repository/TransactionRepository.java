@@ -19,4 +19,6 @@ public interface TransactionRepository extends JpaRepository<Transaction,Integer
 	@Query("select t from Transaction t where t.date>= :start and t.date<= :current and t.from_account_id=:account_id")
 	public List<Transaction> getTransaction(@Param("start") Date start,@Param("current") Date current,@Param("account_id") int account_id);
 	
+	@Query("select Date(t.date) from Transaction t ")
+	public List<Date> getAll();
 }

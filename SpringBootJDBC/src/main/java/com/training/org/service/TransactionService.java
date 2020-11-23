@@ -12,5 +12,7 @@ public interface TransactionService {
 	void save(Transaction transaction);
 	List<Transaction> getTransaction(Date start,Date current,int account_id);
 	
+	List<Date> getAll();
+	
 }
 

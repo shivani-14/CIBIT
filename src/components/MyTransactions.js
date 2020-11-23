@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import ListItem from './ListItem';
+import './MyTransactions.css';
 
 class MyTransactions extends React.Component{
     constructor(props) {
@@ -35,11 +35,13 @@ class MyTransactions extends React.Component{
         transactions = transactions.data;
         this.setState({transactions})
 
+
     }
+    
     render(){
         return(
-            <div>
-                <select className="form-input"  name="account_id" onChange={e => this.handleInput(e)} style={{"margin-left":"500px","margin-top":"20px","margin-bottom":"30px"}}>
+            <div className="transactions">
+                <select className="form-input"  name="account_id" onChange={e => this.handleInput(e)} style={{"marginLeft":"700px","marginTop":"20px","marginBottom":"30px"}} responsive="true">
 
                <option value="">Debited from </option >
                 {/* <option className="form-input__option"value="savings">Savings</option>
@@ -60,7 +62,7 @@ class MyTransactions extends React.Component{
                 <div >
 
                 
-                <table border="2" style={{"textAlign":"center","margin":" 0 auto"}}>
+                <table border="2" style={{"textAlign":"center","margin":" 0 auto"}} id='transaction'>
                 
                 <thead>
                 
@@ -82,11 +84,11 @@ class MyTransactions extends React.Component{
                         
     
                             <td >{transaction.amount}</td>
-                            <td>{transaction.available_balance}</td>
+                            {transaction.transaction_type === "debit" ? <td style={{"color":"red"}}> {transaction.available_balance}</td> : <td style={{"color":"green"}}> {transaction.available_balance}</td>}
                             <td>{transaction.remark}</td>
-                            <td>{transaction.date}</td>
+                            <td>{transaction.date.substring(0,10)}</td>
                             <td>{transaction.to_account_id}</td>
-                            <td>{transaction.transaction_type}</td>
+                            <td >{transaction.transaction_type}</td>
                         </tr>
 
 
